@@ -20,7 +20,7 @@ CREATE OR REPLACE MODEL austin.location_model
 OPTIONS
   (model_type='linear_reg', labels=['duration_minutes']) AS
 SELECT
-    start_station_name,
+    start_station_name AS location_model,
     EXTRACT(HOUR FROM start_time) AS start_hour,
     EXTRACT(DAYOFWEEK FROM start_time) AS day_of_week,
     duration_minutes,
